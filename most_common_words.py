@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import sys
 import os
 
@@ -30,5 +31,9 @@ for x in range(0, len(search_arr) - 2):
             count.append(counter)
             counter = 0
 
-print(popular_words)
-print(count)
+result ="";
+for index,word in enumerate(popular_words):
+    result+=str(index+1)+'-'+word+'\n'
+file=open('result','w')
+
+file.write(result)
