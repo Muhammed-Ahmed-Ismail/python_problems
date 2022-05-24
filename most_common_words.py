@@ -32,8 +32,10 @@ for x in range(0, len(search_arr) - 2):
             counter = 0
 
 result ="";
+file.close()
 for index,word in enumerate(popular_words):
     result+=str(index+1)+'-'+word+'\n'
 file=open('result','w')
 
 file.write(result)
+file.close()
